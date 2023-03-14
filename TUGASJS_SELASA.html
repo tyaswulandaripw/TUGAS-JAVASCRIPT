@@ -1,0 +1,52 @@
+<script>
+    let p1 = {nama:"putri", nilai:"85"};
+    let p2 = {nama:"dika", nilai:"79"};
+    let p3 = {nama:"rony", nilai:"52"};
+    let p4 = {nama:"fitri", nilai:"83"};
+    let p5 = {nama:"sari", nilai:"40"};
+
+    let person = [p1,p2,p3,p4,p5];
+</script>
+
+<h3>
+    <body></body>
+    
+    <table style="padding: 10; text-align: center; width: 30%;">
+        <tr>
+            <thead>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Nilai</th>
+                <th>Keterangan</th>
+            </thead>
+        </tr>
+        <tbody>
+            <script>
+                var no = 1;
+                for (p of person){
+                    let ket = (p.nilai >= 60)? "Lulus" : "Gagal";
+                    document.write(`
+                        <tr>
+                            <td>${no++}</td>
+                            <td>${p.nama}</td>
+                            <td>${p.nilai}</td>
+                            <td>${ket}</td>
+                        </tr>
+                    `);
+                }
+                var no, warna;
+    for (no=1; no <= 20; no ++){
+        warna = (no % 2 == 0 )? 'yellow' : 'blue';
+        document.write(`
+            <tr bgcolor="${warna}">
+                <td>${no}</td>
+                <td>nama ${p.nama}</td>
+                <td>nilai ${p.nilai}</td>
+                <td>ket ${ket}</td>
+            </tr>
+        `);
+    }
+            </script>
+        </tbody>
+    </table>
+</h3>
